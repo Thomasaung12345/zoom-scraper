@@ -1,3 +1,5 @@
+from pystyle import Colors, Colorate
+from pystyle import Add
 import requests
 import random
 import threading
@@ -17,6 +19,13 @@ ctypes.windll.kernel32.SetConsoleTitleW(f"Threads: {str(threading.active_count()
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 
+banner1 = '''
+╔══╦═╦═╦══╗╔══╦═╦╦╦═╦═╦═╦╦╗
+╠╝╔╣║║║║║║║╠╗╚╣╠╣╔╣╩║╔╣╦╣╔╝
+╚══╩═╩═╩╩╩╝╚══╩═╩╝╚╩╩╝╚═╩╝═'''
+text = " Made By zer0mania / https://github.com/zer0mania "
+print(Colors.green + banner1)
+print(Colors.green + text)
 y = int(input("Threads: "))
 proxyChoose = True
 while proxyChoose:
